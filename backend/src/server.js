@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.use(express.static('../../frontend/dist/'));
+app.use(express.static('../frontend/dist/'));
 
 app.get('/', (req, res) => {
-    res.sendfile('../../frontend/dist/index.html');
+    res.sendfile('../frontend/dist/index.html');
 });
 
 const server = app.listen(3000, () => {
